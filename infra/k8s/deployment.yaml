@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openmanus-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: openmanus-api
+  template:
+    metadata:
+      labels:
+        app: openmanus-api
+    spec:
+      containers:
+        - name: api
+          image: openmanus-api:latest
+          envFrom:
+            - secretRef:
+                name: openmanus-secrets
+          ports:
+            - containerPort: 8000

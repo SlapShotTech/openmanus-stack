@@ -1,0 +1,13 @@
+Feature,OpenManus Status,Notes
+Autonomous multi-step tasks,Implemented,Basic planner/executor/verifier loop implemented
+Wide Research,Partially Implemented,Sharding controller stub; integration with tools to be expanded
+Browser automation,Implemented,Playwright-based tool adapter
+Code execution,Implemented,Sandboxed subprocess execution
+HTTP/API integration,Implemented,HTTP tool using httpx
+RAG/Embeddings,Partially Implemented,In-memory stub; integrate pgvector in future
+Model routing,Implemented,Supports OpenAI, Ollama, vLLM, LM Studio
+Persistent project memory,Partially Implemented,Run logs stored in Postgres; project-level memory in future
+UI dark mode,Implemented,Next.js with Tailwind; needs more polish
+Live run console,Partially Implemented,Task list present; step timeline UI yet to be built
+Audit and replay,Stub,Append-only run logs; export/replay in future
+Admin dashboard,Stub,Keycloak integration provided; UI to be implemented
