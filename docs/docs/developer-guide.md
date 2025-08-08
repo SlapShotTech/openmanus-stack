@@ -12,7 +12,7 @@ The repository uses a PNPM workspace layout:
 * `services/worker` — RQ worker for long‑running tasks.
 * `packages/tools` — Modular tool adapters.
 * `packages/model-router` — Model routing logic.
-* `infra/compose` — Docker Compose and other deployment artifacts.
+* `infra` — Supporting infrastructure configuration (OpenTelemetry, Prometheus, etc.). The Docker Compose file lives at the repository root.
 * `docs` — MkDocs documentation.
 * `tests` — Pytest/Jest test suites and GAIA evaluation harness.
 
