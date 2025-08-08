@@ -4,7 +4,7 @@ SHELL := /bin/bash
 
 ## Run all services using docker compose for development
 dev:
-	docker compose -f infra/compose/docker-compose.yml up --build
+	docker compose up --build
 
 ## Run a demo wide research task via CLI (requires API service running)
 demo-wide-research:
