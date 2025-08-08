@@ -51,7 +51,7 @@ services:
   # API service
   api:
     build:
-      context: ../../services/api
+      context: services/api
       dockerfile: Dockerfile
     depends_on:
       - db
@@ -76,7 +76,7 @@ services:
 
   orchestrator:
     build:
-      context: ../../services/orchestrator
+      context: services/orchestrator
       dockerfile: Dockerfile
     depends_on:
       - api
@@ -97,7 +97,7 @@ services:
 
   worker:
     build:
-      context: ../../services/worker
+      context: services/worker
       dockerfile: Dockerfile
     depends_on:
       - cache
@@ -113,7 +113,7 @@ services:
 
   frontend:
     build:
-      context: ../../apps/frontend
+      context: apps/frontend
       dockerfile: Dockerfile
     environment:
       - NEXT_PUBLIC_API_URL=http://api:8000
@@ -128,14 +128,14 @@ services:
     command:
       - "--config=/etc/otelcol/config.yaml"
     volumes:
-      - ./otel-collector-config.yaml:/etc/otelcol/config.yaml
+      - ./infra/compose/otel-collector-config.yaml:/etc/otelcol/config.yaml
     ports:
       - "4317:4317"
 
   prometheus:
     image: prom/prometheus
     volumes:
-      - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - ./infra/compose/prometheus.yml:/etc/prometheus/prometheus.yml
     ports:
       - "9090:9090"
 
@@ -153,3 +153,4 @@ volumes:
   db_data:
   minio_data:
   meili_data:
+
