@@ -15,7 +15,7 @@ OpenManus‑Stack is an open‑source, self‑hostable alternative to [Manus.im]
 
 ## Quick Start
 
-Ensure you have Docker and Docker Compose installed.  Clone this repository and run the stack:
+Ensure you have Docker and Docker Compose installed.  Clone this repository and run the stack using the provided `docker-compose.yml`:
 
 ```bash
 git clone https://github.com/your-user/openmanus-stack.git
